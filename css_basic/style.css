@@ -34,3 +34,41 @@ header, footer {
     color: white;
     text-align: center;
 }
+article h2 {
+    color: #004466;
+    border-bottom: 2px solid #004466;
+    padding-bottom: 5px;
+}
+
+/* Make the header background stand out */
+header {
+    background-color: #004466;
+    color: white;
+    padding: 10px;
+}
+
+/* Style navigation links */
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+header ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Add a background to the whole page */
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Give the article some padding and border */
+article {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
