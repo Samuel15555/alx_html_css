@@ -1,132 +1,117 @@
-/* RESET STYLES */
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* VARIABLES */
+/* Variables */
 :root {
-    --main-color: #FF6565;
-    --text-color: #fff;
-    --max-width: 1000px;
+    --primary-color: #ff5a5f;
+    --text-color: white;
+    --font-family: 'Arial', sans-serif;
 }
 
-/* BODY */
+/* Body */
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    color: var(--text-color);
-    background-color: #000;
+    font-family: var(--font-family);
 }
 
-/* HEADER / HERO SECTION */
-.hero {
-    background: url('images/01_headphones_desktop@2x.png') no-repeat center center/cover;
+/* Header Section */
+.header {
+    /* background-image: url("images/01_headphones_desktop@2x.png"); */
+    background-color: black;
+    background-size: cover;
+    background-position: center;
     height: 100vh;
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* NAVIGATION */
+/* Navbar */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* puts logo left, nav right */
     align-items: center;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 20px;
+    padding: 20px 60px;
 }
 
+.logo img {
+    height: 30px;
+}
+
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .nav-links a {
-    color: white;
     text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
 }
 
 .nav-links a:hover {
-    color: var(--main-color);
+    color: var(--primary-color);
 }
 
-/* HERO TEXT */
-.hero-text {
+/* Hero Section */
+.hero {
     text-align: center;
-    padding-bottom: 100px;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.hero-text h1 {
-    font-size: 2.5rem;
+.hero h1 {
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.hero-text p {
-    font-size: 1.1rem;
+.hero p {
     margin-bottom: 20px;
 }
 
-.btn {
-    background-color: var(--main-color);
-    border: none;
-    padding: 10px 20px;
+.cta-button {
+    background-color: var(--primary-color);
     color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 30px;
 }
 
-.btn:hover {
-    opacity: 0.9;
+.cta-button:hover {
+    background-color: #e14c4c;
 }
 
-/* RESPONSIVE DESIGN */
+/* Description text below CTA */
+.description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
 
-/* Tablet version (width between 481px and 768px) */
+/* Responsive Images for tablet and mobile */
 @media (max-width: 768px) {
-    .hero {
-        background: url('images/01_headphones_tablet@2x.png') no-repeat center center/cover;
-    }
-
-    .navbar {
-        flex-direction: column;
-    }
-
-    .nav-links {
-        flex-direction: row;
-        gap: 15px;
-    }
-
-    .hero-text h1 {
-        font-size: 2rem;
+    .header {
+        background-image: url("images/01_headphones_tablet@2x.png");
     }
 }
 
-/* Mobile version (width 480px or less) */
 @media (max-width: 480px) {
-    .hero {
-        background: url('images/01_headphones_mobile@2x.png') no-repeat center center/cover;
+    .header {
+        background-image: url("images/01_headphones_mobile@2x.png");
     }
-
     .navbar {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-text h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-text p {
-        font-size: 1rem;
-        padding: 0 20px;
+        gap: 15px;
     }
 }
